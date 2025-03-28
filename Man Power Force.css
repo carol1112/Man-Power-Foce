@@ -147,7 +147,7 @@ header {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       color: #333;
-      padding-top: 100px; /* Ensures space below fixed header */
+      padding-top: 150px; /* Ensures space below fixed header */
   }
 
   hr {
