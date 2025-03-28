@@ -4,115 +4,113 @@
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
-/* Fixed Header */
+
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background:purple;
-    padding: 10px 10px;
-    width: 100%;
-    position: fixed; /* Makes the header fixed at the top */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-  }
-  
-  /* Logo */
-  .logo {
-    display: flex;
-    text-align: center; /* Centers the logo horizontally */
-    }
-  
-  
-  .logo img {
-    width: 200px;
-    height: 100px;
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: purple;
+  padding: 15px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+/* Logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu Items */
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  list-style: none;
+  top: 100%;
+  left: 0;
+  background: purple;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: none;
+  min-width: 180px;
+  position: absolute;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hover Effects */
+.menu li a:hover {
+  background: white;
+  color: purple;
+  border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  background: white;
+  color: purple;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px 0;
   }
-  
-  .logo span {
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  /* Navigation Menu */
+
   .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
+      flex-direction: column;
+      gap: 10px;
   }
-  
-  .menu li {
-    position: relative;
-  }
-  
-  /* Top-Level Menu Items */
-  .menu li a {
-    text-decoration: none;
-    color:white;
-    font-size: 14px;
-    padding: 10px 15px;
-    transition: 0.3s;
-   /* display: inline-block;*/
-  }
-  
-  /* Dropdown Menu (Hidden by Default) */
-  .dropdown-menu {
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background:purple;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    display: none;
-    min-width: 180px;
-  }
-  
-  /* Dropdown Menu Links */
-  .dropdown-menu li {
-    width: 100%;
-  }
-  
-  .dropdown-menu li a {
-    color:white;
-    padding: 10px;
-    display: block;
-    text-align: left;
-    font-size: 14px;
-  }
-  
-  /* Show Dropdown Menu on Hover */
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  /* Hover Effects */
-  .menu li a:hover {
-    background:purple;
-    color:black;
-    border-radius: 5px;
-  }
-  
-  .dropdown-menu li a:hover {
-    background:purple;
-    color:black;
-  }
-  
-  /* Content Section to Test Fixed Header */
-  .content {
-    padding: 50px;
-    text-align: center;
-  }
-
+}
     /* Video Section */
+
+    
   #home {
     display: flex;
     justify-content: center;
@@ -140,14 +138,92 @@ header {
     }
 }
 
-    /* About Us Section */
- hr {
-      border: 0; /* Remove default border */
-      height: 2px; /* Set height of the divider */
-      background-color: #007BFF; /* Color of the divider */
-      margin: 40px 0; /* Add space above and below the divider */
+   
+
+     /* About Us Section */
+     body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding-top: 100px; /* Ensures space below fixed header */
   }
-  
+
+  hr {
+      border: 0;
+      height: 2px;
+      background-color: #007BFF;
+      margin: 40px 0;
+  }
+
+  .about-us {
+      padding: 50px 0;
+      background-color: #fff;
+  }
+
+  .container1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+
+  .about-image {
+      flex: 1;
+      margin-right: 40px;
+  }
+
+  .about-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .about-image img:hover {
+      opacity: 0.7;
+      transform: scale(1.05);
+  }
+
+  .about-text {
+      flex: 1;
+  }
+
+  .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: blue;
+  }
+
+  .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: black;
+      text-align: justify;
+      text-indent: 2em;
+  }
+
+  @media (max-width: 768px) {
+      .container1 {
+          flex-direction: column;
+      }
+
+      .about-image {
+          margin-right: 0;
+          margin-bottom: 20px;
+      }
+
+      .about-text {
+          text-align: center;
+      }
+  }
+
+  /*mission section*/
+
 .Mission {
   padding: 80px 20px;
   background-color:plum;
@@ -230,10 +306,9 @@ header {
   }
 }
 
+/*services*/
 
-
-      /*benefits carousel*/
-
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -241,135 +316,240 @@ header {
   font-family: 'Arial', sans-serif;
 }
 
+/* Services Section */
+.services-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the section content horizontally */
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 800px; /* Limit the width of the heading for better readability */
+}
+
 .section-heading h2 {
   font-size: 36px;
-  color: blue;
-  margin-bottom: 15px;}
-
-  .section-heading {
-    text-align: center;
-    margin-bottom: 50px;
+  color:blue;
+  margin-bottom: 15px;
 }
 
-.benefits-carousel {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
-  justify-content: center;
- 
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Make 4 containers in a row */
+  gap: 30px;
+  max-width: 1200px; /* Limit the grid width */
+  width: 100%; /* Ensure it takes full width within the max-width */
+  margin: 0 auto; /* Center the grid horizontally */
+  padding: 0 20px; /* Add padding for smaller screens */
 }
 
-.carousel-track {
+/* Service Card */
+.service-card {
+  background: plum;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  color: #2d3436;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.service-description {
+  color:black;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+  }
+  
+  .service-card {
+      padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading h2 {
+      font-size: 28px;
+  }
+  
+  .services-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/*mages slider*/
+  /* Image Slider Section */
+  .slider-container {
+    position: relative;
+    max-width: 800px;
+    max-height: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #060606;
+  }
+  
+  .image-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+  }
+  
+  .image-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .image-slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  /* Navigation Buttons for Image Slider */
+  .image-prev, .image-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .image-prev:hover, .image-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .image-prev {
+    left: 10px;
+  }
+  
+  .image-next {
+    right: 10px;
+  }
+
+
+  
+/* Why Choose Us Section */
+
+.why-choose-us {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color:blue;
+}
+
+.why-choose-us .subtitle {
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 40px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 30px; /* Space between cards */
 }
 
 .benefit-card {
-  min-width: 100%;
+  background-color:plum;
   padding: 30px;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
-.benefit-icon {
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card .icon {
   font-size: 2.5rem;
+  color: #007BFF;
   margin-bottom: 20px;
 }
 
-.benefit-title {
+.benefit-card h3 {
   font-size: 1.5rem;
-  color: blue;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  color: #333;
 }
 
-.benefit-list {
-  list-style: none;
-  padding-left: 0;
-  text-align: left; /* Keep list items left-aligned but centered in container */
-  width: 100%;
-  max-width: 300px; /* Optional: prevents list from stretching too wide */
+.benefit-card p {
+  font-size: 0.95rem;
+  color: black;
+  line-height: 1.6;
 }
 
-.benefit-list li {
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  align-items: start;
-  gap: 10px;
-}
-
-.benefit-list li::before {
-  content: "✓";
-  color: #00b894;
-  font-weight: bold;
-
-
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background:rgb(5, 233, 123);
-  border: none;
-  padding: 15px 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.carousel-button.prev {
-  left: 10px;
-}
-
-.carousel-button.next {
-  right: 10px;
-}
-
-.carousel-indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.indicator.active {
-  background: #00b894;
-  transform: scale(1.2);
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  .benefits-carousel {
-      padding: 10px;
-  }
-  
-  .benefit-card {
-      padding: 20px;
-      justify-content: center;
-  }
-  
-  .benefit-title {
-      font-size: 1.2rem;
+  .benefits-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns per row on smaller screens */
   }
 }
+
+@media (max-width: 480px) {
+  .benefits-grid {
+      grid-template-columns: 1fr; /* 1 column per row on mobile */
+  }
+}
+
+
 
 /* FAQs Section */
 
@@ -483,368 +663,11 @@ hr{margin-top: 40px;}
 }
 
 
-/*services*/
-
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Services Section */
-.services-section {
-  padding: 80px 20px;
-  background-color: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the section content horizontally */
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 50px;
-  max-width: 800px; /* Limit the width of the heading for better readability */
-}
-
-.section-heading h2 {
-  font-size: 36px;
-  color:blue;
-  margin-bottom: 15px;
-}
-
-/* Services Grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Make 4 containers in a row */
-  gap: 30px;
-  max-width: 1200px; /* Limit the grid width */
-  width: 100%; /* Ensure it takes full width within the max-width */
-  margin: 0 auto; /* Center the grid horizontally */
-  padding: 0 20px; /* Add padding for smaller screens */
-}
-
-/* Service Card */
-.service-card {
-  background: plum;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text */
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.service-icon {
-  font-size: 2.5rem;
-  color: #007bff;
-  margin-bottom: 20px;
-}
-
-.service-title {
-  font-size: 1.25rem;
-  color: #2d3436;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.service-description {
-  color:black;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .services-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-  }
-  
-  .service-card {
-      padding: 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-heading h2 {
-      font-size: 28px;
-  }
-  
-  .services-grid {
-      grid-template-columns: 1fr;
-  }
-}
-
-/*video */
-   #work benefits{
-      display:flex;
-      justify-content: center;  /* Horizontal */
-      align-items: center;      /* Vertical */
-      min-height: 1000px;        /* Ensure section has height */
-      background: #f0f0f0;
-      }
-
-
-  /*mages slider*/
-  /* Image Slider Section */
-.slider-container {
-  position: relative;
-  max-width: 800px;
-  max-height: 600px;
-  margin: 50px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #060606;
-}
-
-.image-slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  
-}
-
-.image-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.image-slide img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-}
-
-/* Navigation Buttons for Image Slider */
-.image-prev, .image-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-.image-prev:hover, .image-next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.image-prev {
-  left: 10px;
-}
-
-.image-next {
-  right: 10px;
-}
-  
- /* About Us Section */
-/* General Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
-hr {
-  border: 0; /* Remove default border */
-  height: 2px; /* Set height of the divider */
-  background-color: #007BFF; /* Color of the divider */
-  margin: 40px 0; /* Add space above and below the divider */
-}
-
-.about-us {
-  padding: 50px 0;
-  background-color: #fff;
-}
-
-.container1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Left Side: Image */
-.about-image {
-  flex: 1;
-  margin-right: 40px;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
-} 
-
-/* Hover Effect */
-.about-image img:hover {
-  opacity: 0.7; /* Reduces opacity on hover */
-  transform: scale(1.05); /* Slight zoom-in effect */
-}
-
-
-
-
-/* Right Side: Text */
-.about-text {
-  flex: 1;
-}
-
-.about-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: blue;
-}
-
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: black;
-  text-align: justify; /* Justifies the text */
-  text-indent: 2em; /* Adds an indentation of 2em (adjust as needed) */
-  
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #0056b3;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-  }
-
-  .about-image {
-      margin-right: 0;
-      margin-bottom: 20px;
-  }
-
-  .about-text {
-      text-align: center;
-  }
-}
-
-
-
-/* Why Choose Us Section */
-
-.why-choose-us {
-  padding: 60px 0;
-  background-color: #f9f9f9;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
-.container1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.why-choose-us h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color:blue;
-}
-
-.why-choose-us .subtitle {
-  font-size: 1.1rem;
-  color: black;
-  margin-bottom: 40px;
-}
-
-/* Benefits Grid */
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-  gap: 30px; /* Space between cards */
-}
-
-.benefit-card {
-  background-color:plum;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.benefit-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.benefit-card .icon {
-  font-size: 2.5rem;
-  color: #007BFF;
-  margin-bottom: 20px;
-}
-
-.benefit-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.benefit-card p {
-  font-size: 0.95rem;
-  color: black;
-  line-height: 1.6;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .benefits-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns per row on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .benefits-grid {
-      grid-template-columns: 1fr; /* 1 column per row on mobile */
-  }
-}
-
 
 /* General Styles */
 /* Testimonials Slider Section */
 
- hr{margin-top: 40px;
+hr{margin-top: 40px;
 }
 .testimonials-slider {
   padding: 100px 0;
@@ -997,7 +820,9 @@ hr {
     padding: 8px 12px;
   }
 }
-/* General Reset */
+
+
+/* contact form */
 
 hr{margin-top: 40px;}
 * {
@@ -1247,6 +1072,8 @@ button[type="submit"]:hover {
     font-size: 1rem;
   }
 }
+
+
 /* Footer Styles */
 .footer {
   background: linear-gradient(135deg, #6a0dad 0%, #4b0082 100%);
@@ -1471,3 +1298,117 @@ button[type="submit"]:hover {
   .footer-contact h3 {
     font-size: 
   }}
+
+
+  
+
+
+
+  
+  
+ /* About Us Section */
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+hr {
+  border: 0; /* Remove default border */
+  height: 2px; /* Set height of the divider */
+  background-color: #007BFF; /* Color of the divider */
+  margin: 40px 0; /* Add space above and below the divider */
+}
+
+.about-us {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Left Side: Image */
+.about-image {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+} 
+
+/* Hover Effect */
+.about-image img:hover {
+  opacity: 0.7; /* Reduces opacity on hover */
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+
+
+
+/* Right Side: Text */
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: blue;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: black;
+  text-align: justify; /* Justifies the text */
+  text-indent: 2em; /* Adds an indentation of 2em (adjust as needed) */
+  
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .about-image {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .about-text {
+      text-align: center;
+  }
+}
+
+
+
