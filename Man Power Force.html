@@ -11,31 +11,40 @@
 <body>
 
      <!-- Fixed Header Navigation -->
-     <header>
-      <div class="logo">
-          <img src="manpowerforcelogo.gif" alt="Man Power Force Logo">
-      </div>
-      <nav>
-          <ul class="menu">
-              <li><a href="Man Power Force.html">Home</a></li>
-              <li class="dropdown">
-                  <a href="manpower about.html">About ▾</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="manpower mission.html">Our Mission</a></li>
-                      <li><a href="manpower faqs.html">FAQS</a></li>
-                  </ul>
-              </li>
-              <li><a href="manpower service.html">Services</a></li>
-              <li class="dropdown">
-                  <a href="manpower why-choose.html">Why Choose Us ▾</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="manpower testimonial.html">Testimonials</a></li>
-                  </ul>
-              </li>
-              <li><a href="manpower contact.html">Contact</a></li>
-          </ul>
-      </nav>
-  </header>
+   
+
+  <header>
+    <div class="logo">
+        <img src="manpowerforcelogo.gif" alt="Man Power Force Logo">
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul class="menu" id="menu">
+            <li><a href="Man Power Force.html">Home</a></li>
+            <li class="dropdown">
+                <a href="manpower about.html">About ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="manpower mission.html">Our Mission</a></li>
+                    <li><a href="manpower faqs.html">FAQS</a></li>
+                </ul>
+            </li>
+            <li><a href="manpower service.html">Services</a></li>
+            <li class="dropdown">
+                <a href="manpower why-choose.html">Why Choose Us ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="manpower testimonial.html">Testimonials</a></li>
+                </ul>
+            </li>
+            <li><a href="manpower contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
 
 <!--video play-->
 <hr>
@@ -747,29 +756,18 @@
 });
     </script>
 </section>
+
 <footer class="footer">
   <div class="footer-container">
-    <!-- Footer Logo and QR Code -->
-    <div class="footer-branding">
-      <img src="manpowerforcelogo.gif" alt="Man Power Force Logo" class="footer-logo">
-  
-    </div>
-
-    <!-- Quick Links Columns -->
+    <!-- Footer Navigation Links -->
     <div class="footer-links-container">
       <div class="footer-links">
         <h3>Quick Links</h3>
-        <ul>
+        <ul class="footer-nav">
           <li><a href="Man Power Force.html"><i class="fas fa-chevron-right"></i> Home</a></li>
           <li><a href="manpower about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
           <li><a href="manpower service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
           <li><a href="manpower contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h3>Click Here &#9662</h3>
-        <ul>
           <li><a href="manpower faqs.html"><i class="fas fa-chevron-right"></i> FAQs</a></li>
           <li><a href="manpower mission.html"><i class="fas fa-chevron-right"></i> Mission</a></li>
           <li><a href="manpower why-choose.html"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
@@ -778,20 +776,32 @@
       </div>
     </div>
 
-    <!-- Contact Information -->
-    <div class="footer-qr">
-      <img src="man power force qr code.png" alt="Scan to visit our website" width="130" height="130">
-      <p class="qr-caption">Scan to connect with us</p>
+    <!-- Centered Footer Branding and QR Code -->
+    <div class="footer-center">
+      <div class="footer-branding">
+        <img src="manpowerforcelogo.gif" alt="Man Power Force Logo" class="footer-logo">
+      </div>
+      <div class="footer-qr">
+        <img src="man power force qr code.png" alt="Scan to visit our website" width="130" height="130">
+      </div>
     </div>
+
+    <!-- Footer Description -->
+    <p class="footer-description">Providing reliable and efficient workforce solutions for businesses worldwide. We are committed to empowering organizations with the right talent.</p>
   </div>
   
   <!-- Copyright Section -->
   <div class="footer-bottom">
-    <p class="footer-description">Providing reliable and efficient workforce solutions for businesses worldwide. We are committed to empowering organizations with the right talent.</p>
     <p>&copy; 2025 Man Power Force. All rights reserved.</p>
   </div>
 </footer>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
+
+
 </body>
 </html>
