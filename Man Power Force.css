@@ -70,15 +70,14 @@ header {
 }
 
 .menu li a:hover, .dropdown-menu li a:hover {
-  
-  color:black;
+  color: black;
   border-radius: 5px;
 }
 
 /* Toggle Menu */
 .menu-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 30px;
   color: white;
   cursor: pointer;
 }
@@ -109,6 +108,43 @@ header {
 
   .menu.active {
       display: flex;
+  }
+
+  /* Dropdown for Mobile */
+  .dropdown-menu {
+      position: static;
+      width: 100%;
+  }
+
+  .dropdown-menu li a {
+      padding: 15px;
+      background-color: purple;
+      color: white;
+  }
+
+  .dropdown:hover .dropdown-menu {
+      display: block;
+  }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 769px) {
+  .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .menu-toggle {
+      display: none;
+  }
+
+  .dropdown-menu {
+      display: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+      display: block;
   }
 }
     /* Video Section */
