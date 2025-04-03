@@ -97,6 +97,7 @@ header {
 
   .logo img {
       width: 75px; /* Further reduced logo size */
+      height:60px;
   }
 
   .menu li a {
@@ -158,11 +159,12 @@ header {
 /* Mobile Screens */
 @media (max-width: 480px) {
   header {
-      height: 50px; /* Reduced header for mobile */
+      height: 100px; /* Reduced header for mobile */
   }
 
   .logo img {
-      width: 65px; /* Smaller logo */
+      width: 150px; /* Smaller logo */
+      height:80px;
   }
 }
 
