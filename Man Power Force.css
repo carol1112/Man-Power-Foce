@@ -29,8 +29,8 @@ header {
 
 /* Logo */
 .logo img {
-  width: 85px;  /* Smaller logo */
-  height: auto;
+  width: 100px;  /* Smaller logo */
+  height: 160px;
 }
 
 /* Menu */
@@ -88,7 +88,7 @@ header {
 /* Responsive Design */
 @media (max-width: 1024px) { /* Laptops */
   header {
-      height: 60px; /* Reduced header height more */
+      height: 70px; /* Reduced header height more */
       padding: 6px 12px;
   }
 
@@ -107,7 +107,7 @@ header {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      height: 50px; /* Smaller header for tablets */
+      height: 55px; /* Smaller header for tablets */
       padding: 6px 10px;
   }
 
@@ -155,7 +155,7 @@ header {
 /* Mobile Screens */
 @media (max-width: 480px) {
   header {
-      height: 45px; /* Reduced header for mobile */
+      height: 50px; /* Reduced header for mobile */
   }
 
   .logo img {
