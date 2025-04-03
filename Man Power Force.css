@@ -88,7 +88,7 @@ header {
 /* Responsive Design */
 @media (max-width: 1024px) { /* Laptops */
   header {
-      height: 56px; /* Reduced header height more */
+      height: 60px; /* Reduced header height more */
       padding: 6px 12px;
   }
 
