@@ -8,7 +8,7 @@
 
 body {
   background-color: #f4f4f4;
-  padding-top: 55px; /* Prevent content from being hidden under the fixed header */
+  
 }
 
 /* Header */
@@ -579,13 +579,11 @@ header {
 
   
 /* Why Choose Us Section */
-
 .why-choose-us {
-  padding: 60px 0;
+  padding: 100px 20px; /* Increased padding for better spacing */
   background-color: #f9f9f9;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  margin: 50px 0; /* Added margin to separate from other sections */
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
@@ -594,33 +592,34 @@ header {
 .container1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px; /* Slightly increased side padding */
 }
 
 .why-choose-us h2 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
-  color:blue;
+  margin-bottom: 35px; /* More space below the heading */
+  color: blue;
 }
 
 .why-choose-us .subtitle {
   font-size: 1.1rem;
   color: black;
-  margin-bottom: 40px;
+  margin-bottom: 50px; /* More space below the subtitle */
 }
 
 /* Benefits Grid */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-  gap: 30px; /* Space between cards */
+  gap: 40px; /* Increased space between cards */
+  padding-top: 20px; /* Added spacing from subtitle */
 }
 
 .benefit-card {
-  background-color:plum;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: plum;
+  padding: 35px; /* Increased padding for better spacing */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
@@ -637,57 +636,95 @@ header {
 }
 
 .benefit-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.6rem; /* Slightly larger heading */
+  margin-bottom: 20px;
   color: #333;
 }
 
 .benefit-card p {
-  font-size: 0.95rem;
+  font-size: 1rem; /* Improved readability */
   color: black;
-  line-height: 1.6;
+  line-height: 1.7;
+  padding: 0 10px; /* Added padding for better text alignment */
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) { /* Laptops and tablets */
+  .why-choose-us {
+    padding: 80px 20px; /* Adjusted spacing */
+    margin: 40px 0;
+  }
+
   .benefits-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns per row on smaller screens */
+    gap: 30px; /* Reduced gap slightly for medium screens */
+  }
+
+  .benefit-card {
+    padding: 30px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) { /* Tablets and smaller screens */
   .benefits-grid {
-      grid-template-columns: 1fr; /* 1 column per row on mobile */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+    gap: 25px;
+  }
+
+  .why-choose-us {
+    padding: 70px 15px;
+    margin: 30px 0;
+  }
+
+  .benefit-card {
+    padding: 25px;
   }
 }
 
+@media (max-width: 480px) { /* Mobile devices */
+  .benefits-grid {
+    grid-template-columns: 1fr; /* 1 column per row */
+    gap: 20px;
+  }
+
+  .why-choose-us {
+    padding: 60px 10px;
+    margin: 25px 0;
+  }
+
+  .benefit-card {
+    padding: 20px;
+  }
+}
 
 
 /* FAQs Section */
+hr {
+  margin-top: 20px; /* Reduced top margin */
+}
 
-hr{margin-top: 40px;}
 .faqs-section {
-  padding: 80px 20px;
+  padding: 50px 20px; /* Reduced padding */
   background-color: plum;
   text-align: center;
+  margin: 0; /* No extra margin */
 }
 
 .faqs-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px; /* Adjusted padding */
 }
 
 .faqs-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.3rem; /* Slightly smaller */
+  margin-bottom: 15px; /* Less space below heading */
   color: blue;
 }
 
 .faqs-section .subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: black;
-  margin-bottom: 40px;
+  margin-bottom: 20px; /* Reduced space */
 }
 
 /* FAQ Accordion */
@@ -696,6 +733,7 @@ hr{margin-top: 40px;}
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin-bottom: 20px; /* Reduced bottom spacing */
 }
 
 .faq-item {
@@ -708,11 +746,11 @@ hr{margin-top: 40px;}
 
 .faq-question {
   width: 100%;
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   text-align: left;
   background: none;
   border: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
   cursor: pointer;
   display: flex;
@@ -735,45 +773,48 @@ hr{margin-top: 40px;}
 }
 
 .faq-answer {
-  padding: 0 20px;
+  padding: 0 15px; /* Adjusted padding */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .faq-answer p {
-  font-size: 1rem;
-  color:blue;
-  line-height: 1.6;
-  margin: 15px 0;
+  font-size: 0.95rem;
+  color: blue;
+  line-height: 1.5;
+  margin: 10px 0; /* Reduced space */
 }
 
 .faq-answer ul {
-  margin: 10px 0;
-  padding-left: 20px;
+  margin: 5px 0; /* Tighter list spacing */
+  padding-left: 15px;
 }
 
 .faq-answer ul li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: blue;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .faqs-section {
+    padding: 40px 15px;
+  }
+
   .faqs-section h2 {
     font-size: 2rem;
   }
 
   .faq-question {
-    font-size: 1rem;
-    padding: 15px;
+    font-size: 0.95rem;
+    padding: 12px;
   }
 
   .faq-answer {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
-
 
 
 /* General Styles */
