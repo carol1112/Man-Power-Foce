@@ -526,7 +526,22 @@ header {
     padding: 20px;
   }
 }
+/* Laptops & Larger Screens */
+@media (min-width: 1025px) {
+  .services-section {
+    padding: 60px 20px; /* Adjust padding to remove extra spacing */
+  }
 
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    gap: 30px;
+    max-width: 1400px; /* Increased width for bigger laptops */
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+}
 /* Mobile (1 column) */
 @media (max-width: 768px) {
   .services-grid {
