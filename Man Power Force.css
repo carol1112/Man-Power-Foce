@@ -88,7 +88,7 @@ header {
 /* Responsive Design */
 @media (max-width: 1024px) { /* Laptops */
   header {
-      height: 50px; /* Reduced header height more */
+      height: 56px; /* Reduced header height more */
       padding: 6px 12px;
   }
 
@@ -214,14 +214,14 @@ header {
 @media (max-width: 1440px) {  /* Larger laptops */
   #bg-video {
       width: 75%;
-      max-height: 400px;
+      max-height: 380px;
   }
 }
 
 @media (max-width: 1024px) {  /* Standard laptops & tablets */
   #bg-video {
       width: 70%;  /* Reduce width */
-      max-height: 370px;
+      max-height: 350px;
   }
 }
 
