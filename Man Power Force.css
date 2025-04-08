@@ -91,7 +91,7 @@ header {
 /* Responsive Design */
 @media (max-width: 1024px) { /* Laptops */
   header {
-      height: 70px; /* Reduced header height more */
+      height: 100px; /* Reduced header height more */
       padding: 6px 12px;
   }
 
@@ -159,7 +159,7 @@ header {
 /* Mobile Screens */
 @media (max-width: 480px) {
   header {
-      height: 100px; /* Reduced header for mobile */
+      height: 120px; /* Reduced header for mobile */
   }
 
   .logo img {
