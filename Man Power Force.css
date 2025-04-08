@@ -576,6 +576,9 @@ hr {margin-top: 150px;}
   .section-heading h2 {
     font-size: 1.6rem;
   }
+  .services-section {
+    padding: 80px 20px; /* Adjust padding to remove extra spacing */
+  }
 }
 
 /*mages slider*/
