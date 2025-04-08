@@ -215,39 +215,44 @@ header {
   position: relative;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1440px) {  /* Larger laptops */
+
+/* Large laptops */
+@media (max-width: 1440px) {
   #bg-video {
-      width: 75%;
-      max-height: 380px;
+    width: 75%;
+    max-height: 380px;
   }
 }
 
-@media (max-width: 1024px) {  /* Standard laptops & tablets */
+/* Standard laptops & tablets */
+@media (max-width: 1024px) {
   #bg-video {
-      width: 70%;  /* Reduce width */
-      max-height: 350px;
+    width: 70%;
+    max-height: 350px;
   }
 }
 
-@media (max-width: 768px) {   /* Small tablets & larger smartphones */
+/* Small tablets & large smartphones */
+@media (max-width: 768px) {
   #bg-video {
-      width: 90%;
-      max-height: 350px;
+    width: 90%;
+    max-height: 350px;
   }
 }
 
-@media (max-width: 480px) {   /* Mobile phones */
+/* Mobile phones */
+@media (max-width: 480px) {
   #bg-video {
-      width: 95%;
-      max-height: 300px;
+    width: 95%;
+    max-height: 300px;
   }
 }
 
-@media (max-width: 400px) {   /* Very small screens */
+/* Very small screens */
+@media (max-width: 400px) {
   #bg-video {
-      width: 100%;
-      max-height: 250px;
+    width: 100%;
+    max-height: 250px;
   }
 }
    
@@ -629,7 +634,7 @@ header {
   padding: 100px 20px; /* Increased padding for better spacing */
   background-color: #f9f9f9;
   text-align: center;
-  margin: 50px 0; /* Added margin to separate from other sections */
+  margin: 10px 0; /* Added margin to separate from other sections */
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
@@ -749,7 +754,7 @@ hr {
 }
 
 .faqs-section {
-  padding: 50px 20px; /* Reduced padding */
+  padding: 180px 20px; /* Reduced padding */
   background-color: plum;
   text-align: center;
   margin: 0; /* No extra margin */
@@ -1038,7 +1043,7 @@ hr{margin-top: 40px;}
   align-items: center;
   min-height: 100vh; /* Full viewport height */
   background: white; /* Optional: Add a background color */
-  padding: 20px;
+  padding: 150px;
 }
 
 /* Form Container */
