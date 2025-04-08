@@ -1045,7 +1045,10 @@ hr {
 
 /* contact form */
 
-hr{margin-top: 40px;}
+hr {
+  margin-top: 40px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1058,47 +1061,37 @@ hr{margin-top: 40px;}
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Full viewport height */
-  background: white; /* Optional: Add a background color */
-  padding: 150px;
+  min-height: 100vh;
+  background: white;
+  padding: 40px 20px; /* Reduced for mobile compatibility */
+  overflow: hidden;
 }
 
 /* Form Container */
 .container {
-  max-width: 600px;
   width: 100%;
+  max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: gradient 5s ease infinite;
   background: linear-gradient(#212121, #212121) padding-box,
-              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+              linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
   border: 7px solid transparent;
-  padding: 32px 24px;
+  padding: 2rem;
   font-size: 14px;
-  font-family: inherit;
   color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  box-sizing: border-box;
   border-radius: 20px;
   background-size: 300% 200%;
   animation: gradient 5s ease infinite;
+  overflow: hidden;
 }
 
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-
 
 /* Form Header */
 .form-header {
@@ -1107,20 +1100,20 @@ hr{margin-top: 40px;}
 }
 
 .form-header h2 {
-  font-size: 2.4rem;
-  color:blue;
+  font-size: 2.2rem;
+  color: blue;
   margin-bottom: 10px;
 }
 
 .form-header h1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: white;
   margin-bottom: 10px;
 }
 
 .form-header p {
   font-size: 1.1rem;
-  color:white;
+  color: white;
   line-height: 1.6;
 }
 
@@ -1132,7 +1125,6 @@ hr{margin-top: 40px;}
 
 .input-group {
   position: relative;
-  margin-bottom: 2rem;
 }
 
 .input-group label {
@@ -1141,8 +1133,8 @@ hr{margin-top: 40px;}
   top: 1.2rem;
   color: #666;
   pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background:transparent;
+  transition: all 0.3s ease;
+  background: transparent;
   padding: 0 0.5rem;
   font-size: 1rem;
 }
@@ -1155,11 +1147,10 @@ hr{margin-top: 40px;}
   border: 2px solid #eee;
   border-radius: 8px;
   font-size: 1rem;
-  transition: all 0.3s ease;
   background: #f8f9fa;
+  transition: all 0.3s ease;
 }
 
-/* Focus Styles */
 .input-group input:focus,
 .input-group textarea:focus,
 .input-group select:focus {
@@ -1176,21 +1167,21 @@ hr{margin-top: 40px;}
 .input-group textarea:not(:placeholder-shown) ~ label,
 .input-group select:focus ~ label,
 .input-group select:not(:placeholder-shown) ~ label {
-  top: -2.0rem;
+  top: -1.5rem;
   left: 1rem;
-  font-size: 1rem;
-  color:blue;
-  background:transparent;
+  font-size: 0.9rem;
+  color: blue;
+  background: transparent;
 }
 
-/* Ensure textarea has a placeholder */
+/* Placeholder fix */
 .input-group textarea::placeholder {
   color: transparent;
 }
 
 /* Submit Button */
 button[type="submit"] {
-  background:purple;
+  background: purple;
   color: white;
   padding: 1.2rem 2.5rem;
   border: none;
@@ -1253,39 +1244,50 @@ button[type="submit"]:hover {
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .container {
+    padding: 1.5rem;
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+  #sheetform {
+    padding: 40px 10px;
+  }
+
   .container {
-    padding: 2rem;
-    margin: 1rem;
+    padding: 1.2rem;
+    margin: 0 1rem;
   }
 
   .form-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .form-header h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .form-header p {
     font-size: 1rem;
   }
-
-  #jobForm input,
-  #jobForm textarea {
-    padding: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 1.5rem;
+  .form-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .form-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .form-header p {
+    font-size: 0.95rem;
   }
 
   button[type="submit"] {
@@ -1293,7 +1295,6 @@ button[type="submit"]:hover {
     font-size: 1rem;
   }
 }
-
 
 /* Footer Styles */
 .footer {
