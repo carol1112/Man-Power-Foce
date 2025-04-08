@@ -1079,7 +1079,7 @@ hr {
 /* Large tablets and small laptops */
 @media (max-width: 1024px) {
   .testimonials-slider {
-    padding: 80px 20px;
+    padding: 60px 20px;
   }
 
   .testimonials-slider h2 {
@@ -1145,8 +1145,8 @@ hr {
   }
 
   .testimonial-text {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.7rem;
+    line-height: 1;
   }
 
   .client-info h4 {
@@ -1163,7 +1163,7 @@ hr {
 
   .testimonials-slider1 {
     max-width: 100%;
-    min-height: 180px;
+    min-height: 200px;
   }
 }
 
