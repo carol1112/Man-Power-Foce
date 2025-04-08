@@ -426,20 +426,18 @@ header {
 /*services*/
 
 /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
+
+
+hr {margin-top: 150px;}
 
 /* Services Section */
 .services-section {
-  padding: 60px 20px; /* Reduced padding for better spacing */
+  padding:  120px 20px 60px;/* Reduced padding for better spacing */
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the section content horizontally */
+  
 }
 
 /* Section Heading */
@@ -522,6 +520,16 @@ header {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
     gap: 25px;
   }
+  hr {margin-top: 0;}
+
+  .services-section {
+    padding: 30px 20px; /* Reduced padding for better spacing */
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the section content horizontally */
+  }
+  
 
   .section-heading h2 {
     font-size: 2rem;
