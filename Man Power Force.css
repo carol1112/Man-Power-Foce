@@ -1145,16 +1145,16 @@ hr {
   }
 
   .testimonial-text {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     line-height: 1;
   }
 
   .client-info h4 {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 
   .client-info p {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 
   .testimonial-slide {
@@ -1163,7 +1163,7 @@ hr {
 
   .testimonials-slider1 {
     max-width: 100%;
-    min-height: 200px;
+    min-height: 220px;
   }
 }
 
