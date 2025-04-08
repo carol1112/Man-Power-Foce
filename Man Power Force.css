@@ -749,9 +749,7 @@ header {
 
 
 /* General Reset */
-hr {
-  margin-top: 20px;
-}
+hr{margin-top: 60px;}
 
 /* FAQs Section */
 .faqs-section {
@@ -856,7 +854,7 @@ hr {
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .faqs-section h2 {
     font-size: 2.2rem;
   }
@@ -875,12 +873,15 @@ hr {
   }
 
   .faqs-section {
-    padding: 60px 20px 60px; /* Top padding adjusted for mobile + header spacing */
+    padding: 30px 20px 60px; /* Top padding adjusted for mobile + header spacing */
     background-color: plum;
     text-align: center;
     margin: 0;
-    scroll-margin-top: 100px; /* Prevent overlap when linked by ID */
+    scroll-margin-top: 50px; /* Prevent overlap when linked by ID */
   }
+  
+  hr{margin-top: 0px;}
+
 }
 
 @media (max-width: 768px) {
