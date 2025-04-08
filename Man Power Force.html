@@ -538,122 +538,106 @@
 
 <!-- Testimonials Slider Section -->
 <section class="testimonials-slider" id="testimonials">
-    <div class="container2">
-      <h2>What Our Clients Say</h2>
-      <p class="subtitle">Hear from our satisfied clients about their experience with Man Power Force.</p>
-  
-      <!-- Slider Container -->
-      <div class="testimonials-slider1">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-slide active">
-          <div class="quote-icon">
-            <i class="fas fa-quote-left"></i>
-          </div>
-          <p class="testimonial-text">
-            "Man Power Force provided us with exceptional remote staff who seamlessly integrated into our team. Their professionalism and expertise are unmatched!"
-          </p>
-          <div class="client-info">
-            <h4>John Doe</h4>
-            <p>CEO, Tech Solutions Inc.</p>
-          </div>
+  <div class="container2">
+    <h2>What Our Clients Say</h2>
+    <p class="subtitle">Hear from our satisfied clients about their experience with Man Power Force.</p>
+
+    <!-- Slider Container -->
+    <div class="testimonials-slider1">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-slide active">
+        <div class="quote-icon">
+          <i class="fas fa-quote-left"></i>
         </div>
-  
-        <!-- Testimonial 2 -->
-        <div class="testimonial-slide">
-          <div class="quote-icon">
-            <i class="fas fa-quote-left"></i>
-          </div>
-          <p class="testimonial-text">
-            "The remote staffing solutions from Man Power Force have been a game-changer for our business. Highly recommended!"
-          </p>
-          <div class="client-info">
-            <h4>Jane Smith</h4>
-            <p>Founder, Green Energy Co.</p>
-          </div>
-        </div>
-  
-        <!-- Testimonial 3 -->
-        <div class="testimonial-slide">
-          <div class="quote-icon">
-            <i class="fas fa-quote-left"></i>
-          </div>
-          <p class="testimonial-text">
-            "We were impressed by the quality of talent provided by Man Power Force. They truly understand our needs and deliver results."
-          </p>
-          <div class="client-info">
-            <h4>Michael Brown</h4>
-            <p>Operations Manager, Logistics Pro</p>
-          </div>
+        <p class="testimonial-text">
+          "Man Power Force provided us with exceptional remote staff who seamlessly integrated into our team. Their professionalism and expertise are unmatched!"
+        </p>
+        <div class="client-info">
+          <h4>John Doe</h4>
+          <p>CEO, Tech Solutions Inc.</p>
         </div>
       </div>
-  
-      <!-- Navigation Buttons -->
-      <div class="testimonials-nav">
-        <button class="testimonials-prev-btn"><i class="fas fa-chevron-left"></i></button>
-        <button class="testimonials-next-btn"><i class="fas fa-chevron-right"></i></button>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-slide">
+        <div class="quote-icon">
+          <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="testimonial-text">
+          "The remote staffing solutions from Man Power Force have been a game-changer for our business. Highly recommended!"
+        </p>
+        <div class="client-info">
+          <h4>Jane Smith</h4>
+          <p>Founder, Green Energy Co.</p>
+        </div>
       </div>
-  
-      <!-- Dots/Indicators -->
-      <div class="testimonials-dots">
-        <span class="testimonials-dot active"></span>
-        <span class="testimonials-dot"></span>
-        <span class="testimonials-dot"></span>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-slide">
+        <div class="quote-icon">
+          <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="testimonial-text">
+          "We were impressed by the quality of talent provided by Man Power Force. They truly understand our needs and deliver results."
+        </p>
+        <div class="client-info">
+          <h4>Michael Brown</h4>
+          <p>Operations Manager, Logistics Pro</p>
+        </div>
       </div>
     </div>
-    <SCRIPT>document.addEventListener("DOMContentLoaded", function () {
-        const testimonialSlides = document.querySelectorAll(".testimonial-slide");
-        const testimonialDots = document.querySelectorAll(".testimonials-dot");
-        let currentTestimonialSlide = 0;
-      
-        // Function to show a specific testimonial slide
-        function showTestimonialSlide(index) {
-          testimonialSlides.forEach((slide) => {
-            slide.classList.remove("active", "prev", "next");
-            slide.style.opacity = 0;
-          });
-      
-          testimonialDots.forEach((dot) => dot.classList.remove("active"));
-      
-          testimonialSlides[index].classList.add("active");
-          testimonialSlides[index].style.opacity = 1;
-      
-          testimonialDots[index].classList.add("active");
-        }
-      
-        // Function to show the next testimonial slide
-        function showNextTestimonialSlide() {
-          currentTestimonialSlide = (currentTestimonialSlide + 1) % testimonialSlides.length;
-          showTestimonialSlide(currentTestimonialSlide);
-        }
-      
-        // Function to show the previous testimonial slide
-        function showPrevTestimonialSlide() {
-          currentTestimonialSlide = (currentTestimonialSlide - 1 + testimonialSlides.length) % testimonialSlides.length;
-          showTestimonialSlide(currentTestimonialSlide);
-        }
-      
-        // Initialize the testimonial slider
-        function initializeTestimonialSlider() {
-          showTestimonialSlide(currentTestimonialSlide);
-      
-          document.querySelector(".testimonials-next-btn").addEventListener("click", showNextTestimonialSlide);
-          document.querySelector(".testimonials-prev-btn").addEventListener("click", showPrevTestimonialSlide);
-      
-          testimonialDots.forEach((dot, index) => {
-            dot.addEventListener("click", () => {
-              currentTestimonialSlide = index;
-              showTestimonialSlide(currentTestimonialSlide);
-            });
-          });
-      
-          setInterval(showNextTestimonialSlide, 3000);
-        }
-      
-        initializeTestimonialSlider();
-      });</SCRIPT>
-  </section>
 
+    <!-- Dots/Indicators -->
+    <div class="testimonials-dots">
+      <span class="testimonials-dot active"></span>
+      <span class="testimonials-dot"></span>
+      <span class="testimonials-dot"></span>
+    </div>
+  </div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const testimonialSlides = document.querySelectorAll(".testimonial-slide");
+      const testimonialDots = document.querySelectorAll(".testimonials-dot");
+      let currentTestimonialSlide = 0;
+
+      function showTestimonialSlide(index) {
+        testimonialSlides.forEach((slide) => {
+          slide.classList.remove("active", "prev", "next");
+          slide.style.opacity = 0;
+        });
+
+        testimonialDots.forEach((dot) => dot.classList.remove("active"));
+
+        testimonialSlides[index].classList.add("active");
+        testimonialSlides[index].style.opacity = 1;
+
+        testimonialDots[index].classList.add("active");
+      }
+
+      function showNextTestimonialSlide() {
+        currentTestimonialSlide = (currentTestimonialSlide + 1) % testimonialSlides.length;
+        showTestimonialSlide(currentTestimonialSlide);
+      }
+
+      function initializeTestimonialSlider() {
+        showTestimonialSlide(currentTestimonialSlide);
+
+        testimonialDots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            currentTestimonialSlide = index;
+            showTestimonialSlide(currentTestimonialSlide);
+          });
+        });
+
+        setInterval(showNextTestimonialSlide, 3000);
+      }
+
+      initializeTestimonialSlider();
+    });
+  </script>
+
+</section>
 
 <!-- Application Form Section -->
 <section id="sheetform">
