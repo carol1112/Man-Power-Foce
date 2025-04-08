@@ -581,7 +581,6 @@ header {
   .image-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
- 
     
   }
   
@@ -596,7 +595,33 @@ header {
     border-radius: 10px;
   }
   
+  /* Navigation Buttons for Image Slider */
+  .image-prev, .image-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
   
+  .image-prev:hover, .image-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .image-prev {
+    left: 10px;
+  }
+  
+  .image-next {
+    right: 10px;
+  }
+
 
   
 /* Why Choose Us Section */
@@ -604,7 +629,7 @@ header {
   padding: 100px 20px; /* Increased padding for better spacing */
   background-color: #f9f9f9;
   text-align: center;
-  margin:0; /* Added margin to separate from other sections */
+  margin: 0; /* Added margin to separate from other sections */
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
@@ -719,9 +744,12 @@ header {
 
 
 /* FAQs Section */
+hr {
+  margin-top: 20px; /* Reduced top margin */
+}
 
 .faqs-section {
-  padding: 180px 20px; /* Reduced padding */
+  padding: 160px 20px; /* Reduced padding */
   background-color: plum;
   text-align: center;
   margin: 0; /* No extra margin */
@@ -1010,7 +1038,7 @@ hr{margin-top: 40px;}
   align-items: center;
   min-height: 100vh; /* Full viewport height */
   background: white; /* Optional: Add a background color */
-  padding: 180px;
+  padding: 150px;
 }
 
 /* Form Container */
