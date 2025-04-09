@@ -228,7 +228,7 @@ header {
 @media (max-width: 1024px) {
   #bg-video {
     width: 70%;
-    max-height: 350px;
+    max-height: 320px;
   }
 }
 
