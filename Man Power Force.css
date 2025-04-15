@@ -17,7 +17,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: purple;
-  padding: 8px 15px; /* Reduced padding */
+  padding: 15px 15px; /* Reduced padding */
   width: 100%;
   position: fixed;
   top: 0;
@@ -78,6 +78,7 @@ header {
   color: black;
   border-radius: 5px;
   text-decoration:underline; 
+  padding: 10px 15px;
 }
 
 /* Toggle Menu */
@@ -138,23 +139,22 @@ header {
   .menu.active {
       display: flex;
   }
-
-  /* Dropdown for Mobile */
   .dropdown-menu {
-      position: static;
-      width: 100%;
-  }
-
-  .dropdown-menu li a {
-      padding: 10px;
-      background-color: purple;
-      color: white;
-  }
-
-  .dropdown:hover .dropdown-menu {
-      display: block;
-  }
+    position: static;
+    width: 100%;
 }
+
+.dropdown-menu li a {
+    padding: 10px;
+    background-color: purple;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+}
+
 
 /* Mobile Screens */
 @media (max-width: 480px) {
@@ -166,6 +166,21 @@ header {
       width: 150px; /* Smaller logo */
       height:80px;
   }
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    padding: 15px;
+    background-color: purple;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 }
 
 /* Tablet and larger screens */
