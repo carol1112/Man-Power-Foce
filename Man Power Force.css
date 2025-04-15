@@ -191,155 +191,255 @@ header {
     /* Video Section */
 
     
-/* Home Section Styling */
+/* Base reset and full viewport sizing */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 #home {
   display: flex;
-  justify-content: center; /* Centers the video horizontally */
-  align-items: center;     /* Centers the video vertically */
-  min-height: 100vh;       /* Full screen height */
-  background: #060606;
-  padding: 10px;
-  overflow: hidden;        /* Prevent unwanted scrollbars */
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background:black;
+  padding-top: 120px;
 }
 
-/* Video Styling */
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px; /* Reduced from 1000px */
+  margin: 0 auto;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: #000;
+}
+
 #bg-video {
-  width: 80%;              /* Reduced width for laptops */
-  height: auto;            /* Maintain aspect ratio */
-  max-width: 900px;        /* Limit width on larger screens */
-  max-height: 500px;       /* Adjust height to prevent overflow */
-  object-fit: cover;       /* Ensure video fills the container */
-  border-radius: 10px;     /* Optional rounded corners */
-  margin: 0 auto;          /* Centers the video within the container */
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
+/* Responsive adjustments */
 
-/* Large laptops */
-@media (max-width: 1440px) {
-  #bg-video {
-    width: 75%;
-    max-height: 380px;
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+  .video-container {
+      max-width: 800px; /* Reduced from 900px */
   }
 }
 
-/* Standard laptops & tablets */
-@media (max-width: 1024px) {
-  #bg-video {
-    width: 70%;
-    max-height: 320px;
+ /* Laptops (992px - 1199px) - SPECIFICALLY REDUCED */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #home {
+      height: 100vh;
+      padding-top: 120px; /* Minimal top spacing */
+      padding-bottom: 20px;
+  }
+  .video-container {
+      max-width: 500px; /* Even more compact */
+      width: 80%; /* Takes less horizontal space */
+      margin: auto; /* Perfect centering */
+  }
+  .video-wrapper {
+      padding-bottom: 50%; /* Slightly wider aspect ratio */
   }
 }
 
-/* Small tablets & large smartphones */
-@media (max-width: 768px) {
-  #bg-video {
-    width: 90%;
-    max-height: 350px;
+/* Tablets (768px - 991px) - Reduced size */
+@media (min-width: 768px) and (max-width: 991px) {
+  .video-container {
+      max-width: 550px; /* Reduced from 700px */
+      width: 85%;
+  }
+  #home {
+      padding: 15px;
+  }
+  .video-wrapper {
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 }
 
-/* Mobile phones */
-@media (max-width: 480px) {
-  #bg-video {
-    width: 95%;
-    max-height: 300px;
+/* Large phones (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .video-container {
+      width: 90%;
+      max-width: 500px;
+  }
+  .video-wrapper {
+      border-radius: 6px;
   }
 }
 
-/* Very small screens */
-@media (max-width: 400px) {
-  #bg-video {
-    width: 100%;
-    max-height: 250px;
+/* Small phones (up to 575px) */
+@media (max-width: 575px) {
+  #home {
+      padding: 10px;
+      height: auto;
+      min-height: 100vh;
+  }
+  .video-container {
+      width: 100%;
+  }
+  .video-wrapper {
+      padding-bottom: 75%;
+      border-radius: 0;
+      box-shadow: none;
   }
 }
-   
+
+/* Orientation adjustments */
+@media (orientation: portrait) and (max-width: 767px) {
+  .video-wrapper {
+      padding-bottom: 75%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 767px) {
+  #home {
+      height: auto;
+      padding: 5px;
+  }
+  .video-wrapper {
+      padding-bottom: 50%;
+  }
+}
 
      /* About Us Section */
-     body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      padding-top: 180px; /* Ensures space below fixed header */
-  }
 
-  hr {
-      border: 0;
-      height: 2px;
-      background-color: #007BFF;
-      margin: 40px 0;
-  }
+   
+/* About Section */
+.about-us {
+  padding: 180px 20px 100px;
+  background-color: #fff;
+}
 
-  .about-us {
-      padding: 50px 0;
-      background-color: #fff;
-  }
+/* Container */
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  flex-direction: row; /* Default to row layout (image left, text right) */
+}
 
+/* Image Section */
+.about-image {
+  flex: 1 1 50%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+/* Text Section */
+.about-text {
+  flex: 1 1 50%;
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: blue;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: black;
+  text-align: justify;
+  text-indent: 2em;
+}
+
+/* 📱 Mobile Phones */
+@media (max-width: 767px) {
   .container1 {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .about-image {
-      flex: 1;
-      margin-right: 40px;
-  }
-
-  .about-image img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-
-  .about-image img:hover {
-      opacity: 0.7;
-      transform: scale(1.05);
+  .about-image,
+  .about-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
   }
 
   .about-text {
-      flex: 1;
+    padding: 0 10px;
+    text-align: center;
+    text-indent: 0;
   }
 
   .about-text h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: blue;
+    font-size: 2rem;
+    color: #0044cc;
   }
 
   .about-text p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      color: black;
-      text-align: justify;
-      text-indent: 2em;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* 🧾 Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container1 {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  @media (max-width: 768px) {
-      .container1 {
-          flex-direction: column;
-      }
-
-      .about-image {
-          margin-right: 0;
-          margin-bottom: 20px;
-      }
-
-      .about-text {
-          text-align: center;
-      }
+  .about-text {
+    padding: 0 20px;
+    text-align: center;
+    text-indent: 0;
   }
 
-  /*mission section*/
+  .about-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+  }
+}
+
+  
 /* Mission Section */
 hr {
   margin-top: 80px;
