@@ -78,7 +78,7 @@ header {
   color: black;
   border-radius: 5px;
   text-decoration:underline; 
-  padding: 10px 15px;
+  
 }
 
 /* Toggle Menu */
@@ -172,7 +172,7 @@ header {
 }
 
 .dropdown-menu li a {
-    padding: 15px;
+    padding: 20px;
     background-color: purple;
     color: white;
 }
